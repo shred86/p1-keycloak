@@ -21,6 +21,7 @@ before_install:
 #   - docker run -e CI=true shred86/keycloak-test npm run test
 
 deploy:
+  edge: true
   provider: script
   script: bash ./deploy.sh
   on:
