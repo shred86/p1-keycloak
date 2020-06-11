@@ -4,4 +4,4 @@ docker push shred86/p1-keycloak:latest
 docker push shred86/p1-keycloak:$SHA
 
 kubectl apply -f k8s
-kubectl set image deployments/p1-keycloak server=shred86/p1-keycloak:$SHA
+kubectl set image deployments/keycloak-deployment keycloak=shred86/p1-keycloak:$SHA
