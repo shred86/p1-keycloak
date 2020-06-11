@@ -19,12 +19,12 @@ spec:
         paths:
           - path: /?(.*)
             backend:
-              serviceName: client-cluster-ip-service
+              serviceName: keycloak-cluster-ip-service
               servicePort: 8080
     - host: www.jamiemun.com
       http:
         paths:
           - path: /?(.*)
             backend:
-              serviceName: client-cluster-ip-service
+              serviceName: keycloak-cluster-ip-service
               servicePort: 8080
