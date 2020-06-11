@@ -14,7 +14,7 @@ before_install:
   - gcloud config set compute/zone us-west1-a
   - gcloud container clusters get-credentials p1-keycloak
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker build -t shred86/keycloak-test -f ./client/Dockerfile.dev ./p1-image
+  - docker build -t shred86/keycloak-test -f ./p1-image/Dockerfile.dev ./p1-image
 
 script:
   - docker run -e CI=true shred86/keycloak-test npm run test
