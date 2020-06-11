@@ -1,0 +1,20 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: jamiemun-com-tls
+spec:
+  secretName: jamiemun-com
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: jamiemun.com
+  dnsNames:
+    - jamiemun.com
+    - www.jamiemun.com
+  acme:
+    config:
+      - http01:
+          ingressClass: nginx
+        domains:
+          - jamiemun.com
+          - www.jamiemun.com
